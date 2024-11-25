@@ -51,7 +51,7 @@ def get_user():
         name = request.args.get("name")
         
         if not email or not name:
-            return jsonify({"error": "Missing fields in request"}), 400
+            return jsonify({"error": "Missing fields from request"}), 400
         
         response = {
             "payload": {
@@ -70,7 +70,7 @@ def add_user():
         user_id = request.form.get("id")
         
         if not email or not name or not user_id:
-            return jsonify({"error": "Missing fields in request"}), 400
+            return jsonify({"error": "Missing fields from request"}), 400
         
         response = {
             "payload": {
@@ -88,14 +88,14 @@ def create_user():
         data = request.get_json()
         
         if not data:
-            return jsonify({"error": "No JSON data provided"}), 400
+            return jsonify({"error": "No data provided"}), 400
 
         email = data.get("email")
         name = data.get("name")
         user_id = data.get("id")
 
         if not email or not name or not user_id:
-            return jsonify({"error": "Missing fields in request"}), 400
+            return jsonify({"error": "Missing fields from request"}), 400
 
         response = {
             "payload": {
