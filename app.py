@@ -5,28 +5,28 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# H - 1: GET
+# H - 1
 @app.route("/users", methods=["GET"])
 def get_users():
     if request.method == "GET":
         response = {"payload": "success"}
         return jsonify(response), 200
     
-# H - 2: POST
+# H - 2
 @app.route("/user", methods=["POST"])
 def post_user():
     if request.method == "POST":
         response = {"payload": "success"}
         return jsonify(response), 200
 
-# H - 3: DELETE
+# H - 3
 @app.route("/user", methods=["DELETE"])
 def delete_user():
     if request.method == "DELETE":
         response = {"payload": "success"}
         return jsonify(response), 200
 
-# H - 4: PUT
+# H - 4
 @app.route("/user", methods=["PUT"])
 def put_user():
     if request.method == "PUT":
@@ -36,7 +36,7 @@ def put_user():
             }
         return jsonify(response), 200
     
-# H - 5: GET
+# H - 5
 @app.route("/api/v1/users", methods=["GET"])
 def get_list():
     if request.method == "GET":
